@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +18,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->string('role')->default('2001');
+            $table->string('level')->default('1');
+            $table->string('progress')->default('10');
             $table->string('phone_number')->nullable()->unique(); // Added phone number
             $table->string('google_id')->nullable();
             $table->string('google_token')->nullable();
